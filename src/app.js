@@ -1,5 +1,4 @@
 const express = require('express')
-const app = express()
 var cors = require('cors');
 
 require('./db/db.js')
@@ -17,4 +16,3 @@ app.use(router)
 app.listen(port, function() {
   console.log('Server up and running on port', port)
 })
- 
