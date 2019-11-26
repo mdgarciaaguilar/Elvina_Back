@@ -2,14 +2,10 @@
 const mongoose = require('mongoose')
 
 const productSchema = mongoose.Schema({
-  categorias: {
+  categoria: {
     type: [{
-      categoria: {
+      nombre: {
         type: String,
-        required: true
-      },
-      cat_id: {
-        type: Number,
         required: true
       },
       productos: [{
