@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const productSchema = mongoose.Schema({
   categoria: {
     type: [{
-      nombre: {
+      name: {
         type: String,
         required: true
       },
