@@ -3,35 +3,25 @@ const mongoose = require('mongoose')
 
 const productSchema = mongoose.Schema({
   categoria: {
-    type: [{
-      name: {
-        type: String,
-        required: true
-      },
-      productos: [{
-        nombre: {
-          type: String,
-          required: true
-        },
-        descripcion: {
-          type: String,
-          required: true
-        },
-        presentacion: {
-          type: String,
-          required: true
-        },
-        link: {
-          type: String,
-          required: true
-        }
-      }
-      ]
-    }
-    ],
+    type: String,
+    required: true
+  },
+  nombre: {
+    type: String,
+    required: true
+  },
+  descripcion: {
+    type: String,
+    required: true
+  },
+  presentacion: {
+    type: String,
+    required: true
+  },
+  link: {
+    type: String,
     required: true
   }
-
 })
 
 const Product = mongoose.model('Product', productSchema)
