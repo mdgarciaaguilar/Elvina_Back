@@ -10,5 +10,10 @@ router.post('/products', products.createProduct)
 router.patch('/products/:id', products.updateProduct)
 router.delete('/products/:id', products.deleteProduct)
 
+router.get('*', function(req, res) {
+  res.send({
+    error: 'This route does not exist, try /products'
+  })
+})
 
 module.exports = router
